@@ -1,0 +1,1 @@
+cmd_bsp/drivers/irqchip/built-in.a := echo >/dev/null; rm -f bsp/drivers/irqchip/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/irqchip/built-in.a bsp/drivers/irqchip/irq-sunxi-wakeupgen.o bsp/drivers/irqchip/irq-sun8i-nmi.o

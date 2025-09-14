@@ -1,0 +1,11 @@
+!<thin>
+//                                              84        `
+tcpm/tcpci_husb311.o/
+tcpm/tcpci_et7304.o/
+mux/ps8743.o/
+mux/sunxi-phy-switcher.o/
+
+/0              0           0     0     644     22912     `
+/22             0           0     0     644     12632     `
+/43             0           0     0     644     13120     `
+/57             0           0     0     644     14824     `

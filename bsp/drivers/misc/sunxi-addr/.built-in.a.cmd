@@ -1,0 +1,1 @@
+cmd_bsp/drivers/misc/sunxi-addr/built-in.a := echo >/dev/null; rm -f bsp/drivers/misc/sunxi-addr/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/misc/sunxi-addr/built-in.a bsp/drivers/misc/sunxi-addr/sunxi-addr.o bsp/drivers/misc/sunxi-addr/sha256.o

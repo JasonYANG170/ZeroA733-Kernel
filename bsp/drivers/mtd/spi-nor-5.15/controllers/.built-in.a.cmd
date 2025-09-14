@@ -1,0 +1,1 @@
+cmd_bsp/drivers/mtd/spi-nor-5.15/controllers/built-in.a := echo >/dev/null; rm -f bsp/drivers/mtd/spi-nor-5.15/controllers/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/mtd/spi-nor-5.15/controllers/built-in.a 

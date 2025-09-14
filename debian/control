@@ -1,0 +1,110 @@
+Source: linux-a733
+Maintainer: "Radxa Computer Co., Ltd" <dev@radxa.com>
+Section: admin
+Priority: standard
+Standards-Version: 4.6.0
+Build-Depends: debhelper (>=12~),
+               devscripts,
+               lintian,
+               dh-exec,
+               flex,
+               bison,
+               bc,
+               libncurses-dev,
+               libssl-dev,
+               cpio,
+               kmod,
+               libyaml-dev,
+
+Package: linux-image-radxa-cubie-a7a
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-image
+Depends: radxa-overlays-dkms,
+         linux-image-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux meta-package for Radxa Cubie A7A
+ This is the meta-package for Linux kernel.
+
+Package: linux-headers-radxa-cubie-a7a
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-headers
+Depends: linux-headers-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux headers meta-package for Radxa Cubie A7A
+ This is the meta-package for Linux headers.
+
+Package: linux-libc-dev-radxa-cubie-a7a
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-libc-dev
+Depends: linux-libc-dev-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux libc-dev meta-package for Radxa Cubie A7A
+ This is the meta-package for Linux libc-dev.
+
+Package: linux-image-radxa-cubie-a7s
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-image
+Depends: radxa-overlays-dkms,
+         linux-image-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux meta-package for Radxa Cubie A7S
+ This is the meta-package for Linux kernel.
+
+Package: linux-headers-radxa-cubie-a7s
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-headers
+Depends: linux-headers-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux headers meta-package for Radxa Cubie A7S
+ This is the meta-package for Linux headers.
+
+Package: linux-libc-dev-radxa-cubie-a7s
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-libc-dev
+Depends: linux-libc-dev-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux libc-dev meta-package for Radxa Cubie A7S
+ This is the meta-package for Linux libc-dev.
+
+Package: linux-image-radxa-cubie-a7z
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-image
+Depends: radxa-overlays-dkms,
+         linux-image-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux meta-package for Radxa Cubie A7Z
+ This is the meta-package for Linux kernel.
+
+Package: linux-headers-radxa-cubie-a7z
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-headers
+Depends: linux-headers-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux headers meta-package for Radxa Cubie A7Z
+ This is the meta-package for Linux headers.
+
+Package: linux-libc-dev-radxa-cubie-a7z
+Architecture: all
+Section: kernel
+Priority: optional
+Provides: linux-libc-dev
+Depends: linux-libc-dev-${binary:Version}-a733,
+         ${misc:Depends},
+Description: Radxa Linux libc-dev meta-package for Radxa Cubie A7Z
+ This is the meta-package for Linux libc-dev.

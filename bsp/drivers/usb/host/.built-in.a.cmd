@@ -1,0 +1,1 @@
+cmd_bsp/drivers/usb/host/built-in.a := echo >/dev/null; rm -f bsp/drivers/usb/host/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/usb/host/built-in.a bsp/drivers/usb/host/ehci-sunxi.o bsp/drivers/usb/host/ohci-sunxi.o bsp/drivers/usb/host/sunxi-hci.o

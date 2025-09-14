@@ -1,0 +1,1 @@
+cmd_bsp/drivers/usb/dwc3/built-in.a := echo >/dev/null; rm -f bsp/drivers/usb/dwc3/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/usb/dwc3/built-in.a bsp/drivers/usb/dwc3/phy-sunxi-plat.o bsp/drivers/usb/dwc3/dwc3-sunxi-plat.o

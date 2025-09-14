@@ -1,0 +1,18 @@
+!<thin>
+//                                              206       `
+mfd/axp2101.o/
+mfd/axp2101-i2c.o/
+notifier/sunxi-power-notifier.o/
+temp_ctrl/axp8191_temp_ctrl.o/
+power_key/axp2101-pek.o/
+regulator/axp2101-regulator.o/
+supply/axp515_usb_power.o/
+supply/axp515_battery.o/
+/0              0           0     0     644     129664    `
+/15             0           0     0     644     8840      `
+/34             0           0     0     644     7032      `
+/67             0           0     0     644     13696     `
+/98             0           0     0     644     23392     `
+/123            0           0     0     644     121952    `
+/154            0           0     0     644     28088     `
+/181            0           0     0     644     43032     `

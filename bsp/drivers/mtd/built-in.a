@@ -1,0 +1,41 @@
+!<thin>
+//                                              434       `
+parsers/sunxipart.o/
+spi-nor-5.15/core.o/
+spi-nor-5.15/sfdp.o/
+spi-nor-5.15/atmel.o/
+spi-nor-5.15/catalyst.o/
+spi-nor-5.15/eon.o/
+spi-nor-5.15/esmt.o/
+spi-nor-5.15/everspin.o/
+spi-nor-5.15/fujitsu.o/
+spi-nor-5.15/gigadevice.o/
+spi-nor-5.15/intel.o/
+spi-nor-5.15/issi.o/
+spi-nor-5.15/macronix.o/
+spi-nor-5.15/micron-st.o/
+spi-nor-5.15/spansion.o/
+spi-nor-5.15/sst.o/
+spi-nor-5.15/winbond.o/
+spi-nor-5.15/xilinx.o/
+spi-nor-5.15/xmc.o/
+
+/0              0           0     0     644     6080      `
+/21             0           0     0     644     46112     `
+/42             0           0     0     644     8720      `
+/63             0           0     0     644     3352      `
+/85             0           0     0     644     1992      `
+/110            0           0     0     644     2488      `
+/130            0           0     0     644     1816      `
+/151            0           0     0     644     1896      `
+/176            0           0     0     644     1664      `
+/200            0           0     0     644     2776      `
+/227            0           0     0     644     2000      `
+/249            0           0     0     644     3464      `
+/270            0           0     0     644     4624      `
+/295            0           0     0     644     6384      `
+/321            0           0     0     644     4800      `
+/346            0           0     0     644     5424      `
+/366            0           0     0     644     5128      `
+/390            0           0     0     644     2728      `
+/413            0           0     0     644     1728      `

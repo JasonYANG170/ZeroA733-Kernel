@@ -1,0 +1,11 @@
+!<thin>
+//                                              80        `
+sunxi-uart-ng-core.o/
+sunxi-uart-ng-dma.o/
+sunxi-uart-trace.o/
+early_printk.o/
+
+/0              0           0     0     644     74824     `
+/22             0           0     0     644     25824     `
+/43             0           0     0     644     1104      `
+/63             0           0     0     644     5096      `

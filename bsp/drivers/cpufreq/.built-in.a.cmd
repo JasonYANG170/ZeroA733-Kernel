@@ -1,0 +1,1 @@
+cmd_bsp/drivers/cpufreq/built-in.a := echo >/dev/null; rm -f bsp/drivers/cpufreq/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/cpufreq/built-in.a bsp/drivers/cpufreq/cpufreq-linux-5.15/built-in.a bsp/drivers/cpufreq/sun50i-cpufreq-nvmem.o

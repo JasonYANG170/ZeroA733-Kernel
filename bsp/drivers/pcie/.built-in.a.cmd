@@ -1,0 +1,1 @@
+cmd_bsp/drivers/pcie/built-in.a := echo >/dev/null; rm -f bsp/drivers/pcie/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/pcie/built-in.a bsp/drivers/pcie/pcie-sunxi-rc.o bsp/drivers/pcie/pcie-sunxi-dma.o bsp/drivers/pcie/pcie-sunxi-plat.o

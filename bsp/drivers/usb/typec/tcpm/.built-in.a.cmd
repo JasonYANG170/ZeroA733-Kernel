@@ -1,0 +1,1 @@
+cmd_bsp/drivers/usb/typec/tcpm/built-in.a := echo >/dev/null; rm -f bsp/drivers/usb/typec/tcpm/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/usb/typec/tcpm/built-in.a bsp/drivers/usb/typec/tcpm/tcpci_husb311.o bsp/drivers/usb/typec/tcpm/tcpci_et7304.o

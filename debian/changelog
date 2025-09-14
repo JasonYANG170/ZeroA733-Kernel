@@ -1,0 +1,117 @@
+linux-a733 (5.15.147-8) unstable; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * fix: restore devcontainer image version
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Mon, 08 Sep 2025 06:26:58 +0000
+
+linux-a733 (5.15.147-7) unstable; urgency=medium
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Wed, 20 Aug 2025 12:22:53 +0000
+
+linux-a733 (5.15.147-6) unstable; urgency=medium
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Fri, 15 Aug 2025 11:42:57 +0000
+
+linux-a733 (5.15.147-5) unstable; urgency=medium
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Tue, 12 Aug 2025 10:01:01 +0000
+
+linux-a733 (5.15.147-4) unstable; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * chore: update files based on new template
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Fri, 08 Aug 2025 14:52:34 +0000
+
+linux-a733 (5.15.147-3) unstable; urgency=medium
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Fri, 08 Aug 2025 11:56:02 +0000
+
+linux-a733 (5.15.147-2) unstable; urgency=medium
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Tue, 05 Aug 2025 11:13:07 +0000
+
+linux-a733 (5.15.147-1) unstable; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * chore: fix build and remove A527 support
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Mon, 28 Jul 2025 10:51:15 +0000
+
+linux-aw2501 (5.15.147-4) unstable; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * chore: prepare for more SoC support
+  * feat: initial support for A733 products
+  * fix: correct bad values from template update
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Fri, 25 Jul 2025 10:59:54 +0000
+
+linux-aw2501 (5.15.147-3) unstable; urgency=medium
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Tue, 15 Jul 2025 10:35:07 +0000
+
+linux-aw2501 (5.15.147-2) unstable; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * feat: update to Allwinner SDK v1.4.6
+  * fix: sync device tree name with upstream
+  * fix: latest U-Boot supports loading modules
+
+  [ github-actions[bot] ]
+  * chore: update submodules
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Mon, 14 Jul 2025 08:51:54 +0000
+
+linux-aw2501 (5.15.147-1) unstable; urgency=medium
+
+  [ "Radxa Computer Co., Ltd" ]
+  * Add initial Debian packaging support
+
+  [ ZHANG Yuntian ]
+  * feat: add device submodule
+  * fix: correct typo
+  * fix: do not use allwinner's default config
+  * fix: disable clean
+  * feat: include device tree
+  * fix: add missing build dependency
+  * fix: workaround gckvip_map_user type conflict
+  * chore: bump submodules
+  * chore: update devenv.lock
+  * fix: do not override EXTRA_CFLAGS
+  * fix: kernel header built in Debian 12 won't work in 11
+  * fix: sync device tree name with upstream
+  * fix: additional hacks for Allwinner kernel
+
+  [ github-actions[bot] ]
+  * fix: limit parallelism to 1 to enforce job order
+  * fix: do not use the default defconfig
+  * fix: add patches to solve build issues
+  * fix: add missing make bindeb-pkg dependency
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Wed, 18 Jun 2025 10:17:29 +0000

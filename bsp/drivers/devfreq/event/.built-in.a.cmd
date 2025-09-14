@@ -1,0 +1,1 @@
+cmd_bsp/drivers/devfreq/event/built-in.a := echo >/dev/null; rm -f bsp/drivers/devfreq/event/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/devfreq/event/built-in.a bsp/drivers/devfreq/event/sunxi-ddrpmu.o

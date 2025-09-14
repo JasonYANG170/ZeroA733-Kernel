@@ -1,0 +1,221 @@
+#!/bin/sh
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs none /dev
+
+exec < /dev/console > /dev/console 2>&1
+
+refind_root()
+{
+	local BOOT_NAND=/dev/nand0
+	local BOOT_EMMC=/dev/mmcblk0
+	local BOOT_NOR=/dev/mtdblock0
+	local BOOT_UFS=/dev/sda
+
+	rootfs_dir="$BOOT_EMMC $BOOT_UFS $BOOT_NOR $BOOT_NAND"
+
+	for dir in ${rootfs_dir}; do
+		if [ "${dir}" == "${BOOT_UFS}" ]; then
+			ROOT_DEVICE=`fdisk -l $dir | awk '/rootfs/{print "'$dir'"$1}'`
+		else
+			ROOT_DEVICE=`fdisk -l $dir | awk '/rootfs/{print "'$dir'p"$1}'`
+		fi
+		if [ -n "$ROOT_DEVICE" ]; then
+			break
+		fi
+	done
+
+	echo $ROOT_DEVICE
+}
+
+for parm in $(cat /proc/cmdline); do
+	case $parm in
+	ramfs)
+		RAMFS_MODE=1
+		;;
+	root=*)
+		ROOT_DEVICE=$(refind_root)
+		[ -z "$ROOT_DEVICE" ] && \
+		ROOT_DEVICE=`echo $parm | awk -F\= '{print $2}'`
+		;;
+	console=*)
+		CONSOLE_DEVICE=`echo $parm | awk -F\= '{print $2}' | awk -F\, '{print $1}'`
+		;;
+	gpt=*)
+		GPT_SUPPORT=`echo $parm | awk -F\= '{print $2}'`
+		;;
+	esac
+done
+
+if [ "x$ROOT_DEVICE" = "x" ]; then
+	ROOT_DEVICE=autoconfig
+fi
+
+echo [$0]: "getty is $CONSOLE_DEVICE"
+echo [$0]: RootDevice is \"$ROOT_DEVICE\" , GPT_SUPPORT=$GPT_SUPPORT
+
+#set the default device for autoconfig
+if [ "x$GPT_SUPPORT" = "x1" ]; then
+	NAND_DEF_DEVICE=nand0p5
+	SDMMC_DEF_DEVICE=mmcblk0p5
+	UFS_DEF_DEVICE=sda5
+else
+	NAND_DEF_DEVICE=nandd
+	SDMMC_DEF_DEVICE=mmcblk0p7
+	UFS_DEF_DEVICE=sda5
+fi
+
+# $1: the name of block device
+wait_for_ready()
+{
+	CNT=10
+	while true; do
+		if [ -b $1 ]; then
+			return 0
+		fi
+
+		echo [$0]: Wait $1 ready ...
+
+		CNT=`expr $CNT - 1`
+		if [ $CNT -eq 0 ]; then
+			echo [$0]: $1 is not available!
+			return 1
+		fi
+		sleep 1
+	done
+}
+
+# $1: The block device
+do_mount()
+{
+case $1 in
+	/dev/mtdblock*)
+		mount -o ro,noatime,nodiratime,norelatime -t squashfs $1 /mnt
+		;;
+	*)
+		e2fsck -y $1
+		mount -o rw,noatime,nodiratime,norelatime,noauto_da_alloc,barrier=0,data=ordered -t ext4 $1 /mnt
+		;;
+esac
+
+	if [ $? -ne 0 ]; then
+		echo [$0]: Failed to mount $1!
+	fi
+}
+
+load_nand()
+{
+	echo [$0]: Try to load Nand ...
+
+	NAND_MODULE=/lib/modules/$(uname -r)/nand.ko
+	if [ ! -f $NAND_MODULE ]; then
+		echo [$0]: $NAND_MODULE does not exist!
+#		return 1
+	else
+		insmod $NAND_MODULE
+		if [ $? -ne 0 ]; then
+			echo [$0]: $NAND_MODULE is invalid!
+#			return 2
+		fi
+	fi
+
+	wait_for_ready $1
+	if [ $? -eq 0 ]; then
+		do_mount $1
+	fi
+}
+
+load_emmc()
+{
+	echo [$0]: Try to load EMMC ...
+
+	EMMC_MODULE=/lib/modules/$(uname -r)/sunxi_mmc_host.ko
+	if [ ! -f $EMMC_MODULE ]; then
+		echo [$0]: $EMMC_MODULE does not exist!
+#		return 1
+	else
+		insmod $EMMC_MODULE
+		if [ $? -ne 0 ]; then
+			echo [$0]: $EMMC_MODULE is invalid!
+#			return 2
+		fi
+	fi
+
+	wait_for_ready $1
+	if [ $? -eq 0 ]; then
+		local root_dev=$(refind_root)
+		[ -z "$root_dev" ] && root_dev=$1
+		do_mount $root_dev
+	fi
+}
+
+load_ufs()
+{
+	wait_for_ready $1
+	if [ $? -eq 0 ]; then
+		local root_dev=$(refind_root)
+		[ -z "$root_dev" ] && root_dev=$1
+		do_mount $root_dev
+	fi
+}
+
+load_mtdblock()
+{
+	echo [$0]: Try to load nor ...
+
+	NOR_MODULE=/lib/modules/$(uname -r)/sunxi-spif.ko
+	if [ ! -f $NOR_MODULE ]; then
+		echo [$0]: $NOR_MODULE does not exist!
+#		return 1
+	else
+		insmod $NOR_MODULE
+		if [ $? -ne 0 ]; then
+			echo [$0]: $NOR_MODULE is invalid!
+#			return 2
+		fi
+	fi
+
+	wait_for_ready $1
+	if [ $? -eq 0 ]; then
+		local root_dev=$(refind_root)
+		[ -z "$root_dev" ] && root_dev=$1
+		do_mount $root_dev
+	fi
+}
+
+case $ROOT_DEVICE in
+	/dev/nand*|/dev/system)
+		load_nand $ROOT_DEVICE
+		;;
+	/dev/mmc*)
+		load_emmc $ROOT_DEVICE
+		;;
+	/dev/sda*)
+		load_ufs $ROOT_DEVICE
+		;;
+	/dev/mtdblock*)
+		load_mtdblock $ROOT_DEVICE
+		;;
+	autoconfig*)
+		sleep 1;
+		echo [$0]: default device $SDMMC_DEF_DEVICE $NAND_DEF_DEVICE
+		if cat /proc/partitions|grep "$SDMMC_DEF_DEVICE" >/dev/null;then
+			magic_num=$(hexdump -s 1292 -n 2 -x /dev/$SDMMC_DEF_DEVICE|head -1|awk '{print $2 }')
+			echo $magic_num|grep "f30a" >/dev/null
+			if [ $? -eq 0 ]; then
+				echo [$0]: "magic_num[f30a] match!!!"
+			else
+				load_emmc /dev/$SDMMC_DEF_DEVICE
+			fi
+		else
+			load_nand /dev/$NAND_DEF_DEVICE
+		fi
+		;;
+	*)
+		echo [$0]: "Use default type"
+		;;
+esac
+
+[ -x /mnt/init ] && exec switch_root /mnt /init
+/sbin/getty -L $CONSOLE_DEVICE 115200 vt100 -n -l /bin/ash

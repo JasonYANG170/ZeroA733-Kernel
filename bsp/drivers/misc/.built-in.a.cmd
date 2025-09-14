@@ -1,0 +1,1 @@
+cmd_bsp/drivers/misc/built-in.a := echo >/dev/null; rm -f bsp/drivers/misc/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/misc/built-in.a bsp/drivers/misc/sunxi-rf/built-in.a bsp/drivers/misc/sunxi-addr/built-in.a

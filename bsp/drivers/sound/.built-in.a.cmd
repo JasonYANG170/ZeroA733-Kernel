@@ -1,0 +1,1 @@
+cmd_bsp/drivers/sound/built-in.a := echo >/dev/null; rm -f bsp/drivers/sound/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/sound/built-in.a bsp/drivers/sound/platform/built-in.a bsp/drivers/sound/codecs/built-in.a bsp/drivers/sound/misc/built-in.a bsp/drivers/sound/pa/built-in.a

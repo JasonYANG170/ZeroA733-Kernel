@@ -1,0 +1,190 @@
+!<thin>
+//                                              4252      `
+phy/sunxi_dsi_combophy.o/
+phy/sunxi_dsi_combophy_reg.o/
+panel/edp_general_panel.o/
+panel/panel-dsi.o/
+panel/panel-lvds.o/
+sunxi_drm_drv.o/
+sunxi_drm_crtc.o/
+sunxi_drm_intf.o/
+sunxi_drm_notify.o/
+sunxi_drm_gem.o/
+sunxi_drm_debug.o/
+kernel_panic_printf.o/
+sunxi_fbdev_core.o/
+sunxi_fbdev_platform.o/
+sunxi_device/hardware/lowlevel_de/de_backend.o/
+sunxi_device/hardware/lowlevel_de/de_channel.o/
+sunxi_device/hardware/lowlevel_de/sunxi_de.o/
+sunxi_device/hardware/lowlevel_de/de_top.o/
+sunxi_device/hardware/lowlevel_de/de_frontend.o/
+sunxi_device/hardware/lowlevel_de/wb/de_wb.o/
+sunxi_device/hardware/lowlevel_de/afbd/de_fbd_atw.o/
+sunxi_device/hardware/lowlevel_de/tfbd/de_tfbd.o/
+sunxi_device/hardware/lowlevel_de/csc/de_csc.o/
+sunxi_device/hardware/lowlevel_de/csc/de_csc_table.o/
+sunxi_device/hardware/lowlevel_de/csc/de_csc_platform.o/
+sunxi_device/hardware/lowlevel_de/cdc/de_cdc.o/
+sunxi_device/hardware/lowlevel_de/cdc/de_cdc_table.o/
+sunxi_device/hardware/lowlevel_de/cdc/de_cdc_platform.o/
+sunxi_device/hardware/lowlevel_de/snr/de_snr.o/
+sunxi_device/hardware/lowlevel_de/snr/de_snr_platform.o/
+sunxi_device/hardware/lowlevel_de/sharp/de_sharp.o/
+sunxi_device/hardware/lowlevel_de/sharp/de_sharp_platform.o/
+sunxi_device/hardware/lowlevel_de/dci/de_dci.o/
+sunxi_device/hardware/lowlevel_de/dci/de_dci_platform.o/
+sunxi_device/hardware/lowlevel_de/dlc/de_dlc.o/
+sunxi_device/hardware/lowlevel_de/dlc/de_dlc_platform.o/
+sunxi_device/hardware/lowlevel_de/fcm/de_fcm.o/
+sunxi_device/hardware/lowlevel_de/fcm/de_fcm_platform.o/
+sunxi_device/hardware/lowlevel_de/bld/de_bld.o/
+sunxi_device/hardware/lowlevel_de/bld/de_bld_platform.o/
+sunxi_device/hardware/lowlevel_de/ovl/de_ovl.o/
+sunxi_device/hardware/lowlevel_de/ovl/de_ovl_platform.o/
+sunxi_device/hardware/lowlevel_de/scaler/de_scaler.o/
+sunxi_device/hardware/lowlevel_de/scaler/de_scaler_table.o/
+sunxi_device/hardware/lowlevel_de/scaler/de_scaler_platform.o/
+sunxi_device/hardware/lowlevel_de/gamma/de_gamma.o/
+sunxi_device/hardware/lowlevel_de/gamma/de_gamma_platform.o/
+sunxi_device/hardware/lowlevel_de/dither/de_dither.o/
+sunxi_device/hardware/lowlevel_de/dither/de_dither_platform.o/
+sunxi_device/hardware/lowlevel_de/crc/de_crc.o/
+sunxi_device/hardware/lowlevel_de/crc/de_crc_platform.o/
+sunxi_device/hardware/lowlevel_de/smbl/de_smbl.o/
+sunxi_device/hardware/lowlevel_de/smbl/de_smbl_platform.o/
+sunxi_device/hardware/lowlevel_de/deband/de_deband.o/
+sunxi_device/hardware/lowlevel_de/deband/de_deband_platform.o/
+sunxi_device/hardware/lowlevel_de/fmt/de_fmt.o/
+sunxi_device/hardware/lowlevel_de/fmt/de_fmt_platform.o/
+sunxi_device/hardware/lowlevel_tcon/tcon_tv_reg.o/
+sunxi_device/hardware/lowlevel_tcon/tcon_top.o/
+sunxi_device/sunxi_tcon.o/
+sunxi_device/hardware/lowlevel_lcd/tcon_lcd.o/
+sunxi_device/sunxi_tcon_top.o/
+sunxi_drm_dsi.o/
+sunxi_device/hardware/lowlevel_lcd/dsi_v1.o/
+sunxi_drm_lvds.o/
+sunxi_drm_hdmi.o/
+sunxi_device/sunxi_hdmi.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_dev.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_avp.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_edid.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_fc.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_i2cm.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_mc.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_phy.o/
+sunxi_device/hardware/lowlevel_hdmi20/phy_top.o/
+sunxi_device/hardware/lowlevel_hdmi20/phy_aw.o/
+sunxi_device/hardware/lowlevel_hdmi20/phy_snps.o/
+sunxi_device/hardware/lowlevel_hdmi20/phy_inno.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_cec.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_hdcp.o/
+sunxi_device/hardware/lowlevel_hdmi20/dw_hdcp22.o/
+sunxi_device/hardware/lowlevel_hdmi20/esm_lib/esm_host_lib_init.o/
+sunxi_device/hardware/lowlevel_hdmi20/esm_lib/esm_host_lib_log.o/
+sunxi_device/hardware/lowlevel_hdmi20/esm_lib/esm_host_lib_auth.o/
+sunxi_device/hardware/lowlevel_hdmi20/esm_lib/esm_host_lib_code.o/
+sunxi_device/hardware/lowlevel_hdmi20/esm_lib/esm_host_lib_exceptions.o/
+sunxi_device/hardware/lowlevel_hdmi20/esm_lib/esm_host_lib_mailbox.o/
+sunxi_device/hardware/lowlevel_hdmi20/esm_lib/esm_host_lib_status.o/
+sunxi_drm_edp.o/
+sunxi_device/sunxi_edp.o/
+sunxi_device/sunxi_edp_hdcp.o/
+lib/src/sha1.o/
+sunxi_device/hardware/lowlevel_edp/trilinear_dp14/trilinear_dp14.o/
+sunxi_drm_trace.o/
+/0              0           0     0     644     18456     `
+/26             0           0     0     644     7320      `
+/56             0           0     0     644     13016     `
+/83             0           0     0     644     26960     `
+/102            0           0     0     644     14624     `
+/122            0           0     0     644     34176     `
+/139            0           0     0     644     42080     `
+/157            0           0     0     644     3880      `
+/175            0           0     0     644     5328      `
+/195            0           0     0     644     3648      `
+/212            0           0     0     644     7568      `
+/231            0           0     0     644     221096    `
+/254            0           0     0     644     10872     `
+/274            0           0     0     644     8520      `
+/298            0           0     0     644     12552     `
+/346            0           0     0     644     13344     `
+/394            0           0     0     644     38096     `
+/440            0           0     0     644     14888     `
+/484            0           0     0     644     19288     `
+/533            0           0     0     644     6096      `
+/579            0           0     0     644     11968     `
+/632            0           0     0     644     8256      `
+/682            0           0     0     644     30048     `
+/730            0           0     0     644     16840     `
+/784            0           0     0     644     5128      `
+/841            0           0     0     644     11160     `
+/889            0           0     0     644     236592    `
+/943            0           0     0     644     2080      `
+/1000           0           0     0     644     7224      `
+/1048           0           0     0     644     2064      `
+/1105           0           0     0     644     7704      `
+/1157           0           0     0     644     2384      `
+/1218           0           0     0     644     10632     `
+/1266           0           0     0     644     1928      `
+/1323           0           0     0     644     14552     `
+/1371           0           0     0     644     1936      `
+/1428           0           0     0     644     10760     `
+/1476           0           0     0     644     2064      `
+/1533           0           0     0     644     5744      `
+/1581           0           0     0     644     5424      `
+/1638           0           0     0     644     8432      `
+/1686           0           0     0     644     3944      `
+/1743           0           0     0     644     17896     `
+/1797           0           0     0     644     14920     `
+/1857           0           0     0     644     4176      `
+/1920           0           0     0     644     40640     `
+/1972           0           0     0     644     2432      `
+/2033           0           0     0     644     3456      `
+/2087           0           0     0     644     2880      `
+/2150           0           0     0     644     4656      `
+/2198           0           0     0     644     1808      `
+/2255           0           0     0     644     731512    `
+/2305           0           0     0     644     2304      `
+/2364           0           0     0     644     4664      `
+/2418           0           0     0     644     1656      `
+/2481           0           0     0     644     3544      `
+/2529           0           0     0     644     2256      `
+/2586           0           0     0     644     7680      `
+/2637           0           0     0     644     4176      `
+/2685           0           0     0     644     26512     `
+/2712           0           0     0     644     12248     `
+/2759           0           0     0     644     9288      `
+/2790           0           0     0     644     43144     `
+/2807           0           0     0     644     14584     `
+/2852           0           0     0     644     18240     `
+/2870           0           0     0     644     96832     `
+/2888           0           0     0     644     32736     `
+/2915           0           0     0     644     7872      `
+/2963           0           0     0     644     32224     `
+/3011           0           0     0     644     37664     `
+/3060           0           0     0     644     19480     `
+/3107           0           0     0     644     7432      `
+/3156           0           0     0     644     10600     `
+/3203           0           0     0     644     8104      `
+/3251           0           0     0     644     10936     `
+/3300           0           0     0     644     19424     `
+/3348           0           0     0     644     15152     `
+/3398           0           0     0     644     18808     `
+/3448           0           0     0     644     3088      `
+/3496           0           0     0     644     11192     `
+/3545           0           0     0     644     18096     `
+/3596           0           0     0     644     18048     `
+/3663           0           0     0     644     2032      `
+/3729           0           0     0     644     4216      `
+/3796           0           0     0     644     1248      `
+/3863           0           0     0     644     2312      `
+/3936           0           0     0     644     3888      `
+/4006           0           0     0     644     3040      `
+/4075           0           0     0     644     133280    `
+/4092           0           0     0     644     32344     `
+/4118           0           0     0     644     8504      `
+/4149           0           0     0     644     3024      `
+/4165           0           0     0     644     39976     `
+/4233           0           0     0     644     1104      `
