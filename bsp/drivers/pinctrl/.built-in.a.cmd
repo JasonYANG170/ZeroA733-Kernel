@@ -1,0 +1,1 @@
+cmd_bsp/drivers/pinctrl/built-in.a := echo >/dev/null; rm -f bsp/drivers/pinctrl/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/pinctrl/built-in.a bsp/drivers/pinctrl/pinctrl-sunxi.o bsp/drivers/pinctrl/pinctrl-sun60iw2.o bsp/drivers/pinctrl/pinctrl-sun60iw2-r.o

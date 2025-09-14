@@ -1,0 +1,1 @@
+cmd_bsp/drivers/drm/panel/built-in.a := echo >/dev/null; rm -f bsp/drivers/drm/panel/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/drm/panel/built-in.a bsp/drivers/drm/panel/edp_general_panel.o bsp/drivers/drm/panel/panel-dsi.o bsp/drivers/drm/panel/panel-lvds.o

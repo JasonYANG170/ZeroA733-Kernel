@@ -1,0 +1,1 @@
+cmd_bsp/drivers/cpufreq/cpufreq-linux-5.15/built-in.a := echo >/dev/null; rm -f bsp/drivers/cpufreq/cpufreq-linux-5.15/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/cpufreq/cpufreq-linux-5.15/built-in.a bsp/drivers/cpufreq/cpufreq-linux-5.15/cpufreq-dt.o bsp/drivers/cpufreq/cpufreq-linux-5.15/cpufreq-dt-platdev.o

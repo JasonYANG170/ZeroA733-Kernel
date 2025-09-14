@@ -1,0 +1,1 @@
+cmd_bsp/drivers/uart/built-in.a := echo >/dev/null; rm -f bsp/drivers/uart/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/uart/built-in.a bsp/drivers/uart/sunxi-uart-ng-core.o bsp/drivers/uart/sunxi-uart-ng-dma.o bsp/drivers/uart/sunxi-uart-trace.o bsp/drivers/uart/early_printk.o

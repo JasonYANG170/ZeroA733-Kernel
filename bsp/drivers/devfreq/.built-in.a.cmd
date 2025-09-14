@@ -1,0 +1,1 @@
+cmd_bsp/drivers/devfreq/built-in.a := echo >/dev/null; rm -f bsp/drivers/devfreq/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/devfreq/built-in.a bsp/drivers/devfreq/sun55iw3-devfreq.o bsp/drivers/devfreq/event/built-in.a

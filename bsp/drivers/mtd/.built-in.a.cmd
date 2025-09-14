@@ -1,0 +1,1 @@
+cmd_bsp/drivers/mtd/built-in.a := echo >/dev/null; rm -f bsp/drivers/mtd/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/mtd/built-in.a bsp/drivers/mtd/parsers/built-in.a bsp/drivers/mtd/spi-nor-5.15/built-in.a bsp/drivers/mtd/awnand/built-in.a

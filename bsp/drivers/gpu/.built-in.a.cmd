@@ -1,0 +1,1 @@
+cmd_bsp/drivers/gpu/built-in.a := echo >/dev/null; rm -f bsp/drivers/gpu/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/gpu/built-in.a bsp/drivers/gpu/lima/built-in.a bsp/drivers/gpu/panfrost/built-in.a

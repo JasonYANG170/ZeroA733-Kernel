@@ -1,0 +1,9 @@
+!<thin>
+//                                              60        `
+pinctrl-sunxi.o/
+pinctrl-sun60iw2.o/
+pinctrl-sun60iw2-r.o/
+
+/0              0           0     0     644     66616     `
+/17             0           0     0     644     116264    `
+/37             0           0     0     644     17368     `

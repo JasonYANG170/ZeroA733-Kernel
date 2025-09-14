@@ -1,0 +1,1 @@
+cmd_bsp/drivers/car_reverse/built-in.a := echo >/dev/null; rm -f bsp/drivers/car_reverse/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/car_reverse/built-in.a bsp/drivers/car_reverse/car_reverse_2_0/built-in.a bsp/drivers/car_reverse/car_reverse_amp/built-in.a

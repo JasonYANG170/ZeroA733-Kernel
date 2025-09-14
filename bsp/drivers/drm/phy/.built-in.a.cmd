@@ -1,0 +1,1 @@
+cmd_bsp/drivers/drm/phy/built-in.a := echo >/dev/null; rm -f bsp/drivers/drm/phy/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/drm/phy/built-in.a bsp/drivers/drm/phy/sunxi_dsi_combophy.o bsp/drivers/drm/phy/sunxi_dsi_combophy_reg.o

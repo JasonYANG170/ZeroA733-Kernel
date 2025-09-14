@@ -1,0 +1,1 @@
+cmd_bsp/drivers/iommu/built-in.a := echo >/dev/null; rm -f bsp/drivers/iommu/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/iommu/built-in.a bsp/drivers/iommu/sunxi-iommu-common.o bsp/drivers/iommu/sunxi-iommu-pgtable.o bsp/drivers/iommu/sunxi-iommu-v2.o

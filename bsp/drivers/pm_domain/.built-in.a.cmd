@@ -1,0 +1,1 @@
+cmd_bsp/drivers/pm_domain/built-in.a := echo >/dev/null; rm -f bsp/drivers/pm_domain/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/pm_domain/built-in.a bsp/drivers/pm_domain/pck600_domains.o bsp/drivers/pm_domain/sunxi_pd_test.o

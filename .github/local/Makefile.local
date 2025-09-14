@@ -1,0 +1,49 @@
+CUSTOM_ENV_DEFINITIONS := CFLAGS=-Wno-enum-int-mismatch
+CUSTOM_MAKE_DEFINITIONS := BSP_TOP=bsp/ LICHEE_KERN_DIR=./ KBUILD_DEFCONFIG=bsp.config
+KERNEL_DEFCONFIG := defconfig radxa.config radxa_custom.config
+SUPPORT_CLEAN := false
+ALLWINNER_FIXUP := src/bsp \
+	src/arch/arm64/configs/bsp.config \
+	src/arch/arm64/boot/dts/allwinner/sun60i-a733-cubie-a7a.dts \
+	src/arch/arm64/boot/dts/allwinner/sun60i-a733-cubie-a7s.dts \
+	src/arch/arm64/boot/dts/allwinner/sun60i-a733-cubie-a7z.dts \
+	bsp/ramfs/ramfs_aarch64.cpio.gz bsp/include/sunxi-autogen.h
+
+ALLWINNER_COPY := src/arch/arm64/boot/dts/allwinner src/include/dt-bindings
+
+pre_build: $(ALLWINNER_FIXUP) $(ALLWINNER_COPY)
+
+src/bsp: $(SRC-KERNEL)
+	ln -sf ../bsp $@
+
+src/arch/arm64/configs/bsp.config: $(SRC-KERNEL)
+	ln -sf ../../../../device-a733/configs/default/linux-5.15/bsp_defconfig $@
+
+bsp/ramfs/ramfs_aarch64.cpio.gz: $(SRC-KERNEL)
+	cd bsp/ramfs/ramfs_aarch64 && find . | fakeroot cpio -o -Hnewc | gzip > ../ramfs_aarch64.cpio.gz
+
+bsp/include/sunxi-autogen.h: $(SRC-KERNEL)
+	echo "#define AW_BSP_VERSION \"$(shell git log -n 1 --abbrev=10 --pretty=format:"%h"), $(shell date "+%Y-%m-%d %H:%M:%S"), RadxaOS SDK\"" > $@
+
+src/arch/arm64/boot/dts/allwinner/sun60i-a733-cubie-a7a.dts: $(SRC-KERNEL)
+	ln -sf ../../../../../../device-a733/configs/cubie_a7a/linux-5.15/board.dts $@
+
+src/arch/arm64/boot/dts/allwinner/sun60i-a733-cubie-a7s.dts: $(SRC-KERNEL)
+	ln -sf ../../../../../../device-a733/configs/cubie_a7s/linux-5.15/board.dts $@
+
+src/arch/arm64/boot/dts/allwinner/sun60i-a733-cubie-a7z.dts: $(SRC-KERNEL)
+	ln -sf ../../../../../../device-a733/configs/cubie_a7z/linux-5.15/board.dts $@
+
+.PHONY: src/arch/arm64/boot/dts/allwinner
+src/arch/arm64/boot/dts/allwinner: $(SRC-KERNEL)
+	cp -aR bsp/configs/linux-5.15/*.dtsi $@
+
+.PHONY: src/include/dt-bindings
+src/include/dt-bindings: $(SRC-KERNEL)
+	cp -aR bsp/include/dt-bindings/. $@
+
+clean: clean-symlinks
+
+.PHONY: clean-symlinks
+clean-symlinks:
+	rm -f $(ALLWINNER_FIXUP)

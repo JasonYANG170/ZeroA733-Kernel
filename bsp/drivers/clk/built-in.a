@@ -1,0 +1,46 @@
+!<thin>
+//                                              490       `
+sunxi-ng/ccu_common.o/
+sunxi-ng/ccu_reset.o/
+sunxi-ng/ccu-sunxi-trace.o/
+sunxi-ng/ccu_div.o/
+sunxi-ng/ccu_frac.o/
+sunxi-ng/ccu_gate.o/
+sunxi-ng/ccu_mux.o/
+sunxi-ng/ccu_mult.o/
+sunxi-ng/ccu_phase.o/
+sunxi-ng/ccu_sdm.o/
+sunxi-ng/ccu_nk.o/
+sunxi-ng/ccu_nkm.o/
+sunxi-ng/ccu_nkmp.o/
+sunxi-ng/ccu_nm.o/
+sunxi-ng/ccu_mp.o/
+sunxi-ng/ccu-sunxi-rtc.o/
+sunxi-ng/ccu-ddr.o/
+sunxi-ng/ccu-sun60iw2.o/
+sunxi-ng/ccu-sun60iw2-cpupll.o/
+sunxi-ng/ccu-sun60iw2-rtc.o/
+sunxi-ng/ccu-sun60iw2-r.o/
+clk-debugfs.o/
+/0              0           0     0     644     17392     `
+/23             0           0     0     644     2808      `
+/45             0           0     0     644     1104      `
+/73             0           0     0     644     5392      `
+/93             0           0     0     644     3016      `
+/114            0           0     0     644     8368      `
+/135            0           0     0     644     8168      `
+/155            0           0     0     644     5960      `
+/176            0           0     0     644     2984      `
+/198            0           0     0     644     10024     `
+/218            0           0     0     644     4144      `
+/237            0           0     0     644     4952      `
+/257            0           0     0     644     8600      `
+/278            0           0     0     644     8680      `
+/297            0           0     0     644     7712      `
+/316            0           0     0     644     15296     `
+/342            0           0     0     644     13344     `
+/362            0           0     0     644     184744    `
+/387            0           0     0     644     14512     `
+/419            0           0     0     644     14824     `
+/448            0           0     0     644     26248     `
+/475            0           0     0     644     20200     `

@@ -1,0 +1,1 @@
+cmd_bsp/drivers/clk/built-in.a := echo >/dev/null; rm -f bsp/drivers/clk/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/clk/built-in.a bsp/drivers/clk/sunxi/built-in.a bsp/drivers/clk/sunxi-ng/built-in.a bsp/drivers/clk/clk-debugfs.o

@@ -1,0 +1,1 @@
+cmd_bsp/drivers/input/built-in.a := echo >/dev/null; rm -f bsp/drivers/input/built-in.a; aarch64-linux-gnu-ar cDPrST bsp/drivers/input/built-in.a bsp/drivers/input/init-input.o bsp/drivers/input/ctp/built-in.a bsp/drivers/input/sensor/built-in.a bsp/drivers/input/misc/built-in.a

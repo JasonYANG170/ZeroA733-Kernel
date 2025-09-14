@@ -1,0 +1,20 @@
+!<thin>
+//                                              174       `
+udc/sunxi_udc.o/
+udc/sunxi_udc_board.o/
+udc/sunxi_udc_debug.o/
+udc/sunxi_udc_dma.o/
+usbc/usbc.o/
+usbc/usbc_dev.o/
+usbc/usbc_phy.o/
+misc/sunxi_usb_debug.o/
+sunxi_usb_trace.o/
+/0              0           0     0     644     110520    `
+/17             0           0     0     644     11392     `
+/40             0           0     0     644     2280      `
+/63             0           0     0     644     6256      `
+/84             0           0     0     644     51552     `
+/97             0           0     0     644     23488     `
+/114            0           0     0     644     4976      `
+/131            0           0     0     644     12672     `
+/155            0           0     0     644     1104      `

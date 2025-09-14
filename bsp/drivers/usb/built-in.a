@@ -1,0 +1,38 @@
+!<thin>
+//                                              474       `
+host/ehci-sunxi.o/
+host/ohci-sunxi.o/
+host/sunxi-hci.o/
+sunxi_usb/udc/sunxi_udc.o/
+sunxi_usb/udc/sunxi_udc_board.o/
+sunxi_usb/udc/sunxi_udc_debug.o/
+sunxi_usb/udc/sunxi_udc_dma.o/
+sunxi_usb/usbc/usbc.o/
+sunxi_usb/usbc/usbc_dev.o/
+sunxi_usb/usbc/usbc_phy.o/
+sunxi_usb/misc/sunxi_usb_debug.o/
+sunxi_usb/sunxi_usb_trace.o/
+dwc3/phy-sunxi-plat.o/
+dwc3/dwc3-sunxi-plat.o/
+typec/tcpm/tcpci_husb311.o/
+typec/tcpm/tcpci_et7304.o/
+typec/mux/ps8743.o/
+typec/mux/sunxi-phy-switcher.o/
+/0              0           0     0     644     32632     `
+/19             0           0     0     644     25160     `
+/38             0           0     0     644     73184     `
+/56             0           0     0     644     110520    `
+/83             0           0     0     644     11392     `
+/116            0           0     0     644     2280      `
+/149            0           0     0     644     6256      `
+/180            0           0     0     644     51552     `
+/203            0           0     0     644     23488     `
+/230            0           0     0     644     4976      `
+/257            0           0     0     644     12672     `
+/291            0           0     0     644     1104      `
+/320            0           0     0     644     15000     `
+/343            0           0     0     644     58520     `
+/367            0           0     0     644     22912     `
+/395            0           0     0     644     12632     `
+/422            0           0     0     644     13120     `
+/442            0           0     0     644     14824     `
