@@ -1,3 +1,5 @@
+[简体中文](README_zh.md) | [English](README.md)
+
 # linux-a733
 
 [![Release](https://github.com/radxa-pkg/linux-a733/actions/workflows/release.yaml/badge.svg)](https://github.com/radxa-pkg/linux-a733/actions/workflows/release.yaml)
